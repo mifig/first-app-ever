@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <div style="background: black; color:white; padding:16px;">
+      <%# lt %>
+      <%= link_to "Home", root_path, style: "color: white;" %>
+      <%= link_to "About", about_path, style: "color: white;" %>
+      <%= link_to "Contact", contact_path, style: "color: white;" %>
+
+      <form action="/contact" method="get">
+        <input type="text" name="bandit" placeholder="Who are you looking for?" value="<%= @search %>">
+        <input type="submit">
+      </form>
+    </div>
     <%= yield %>
   </body>
 </html>
